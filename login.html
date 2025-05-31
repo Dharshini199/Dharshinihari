@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+
+  <h1>Login</h1>
+
+  <form id="loginForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      console.log("Form Submitted!");
+      console.log("Username:", username);
+      console.log("Password:", password);
+    });
+  </script>
+  <style>
+  #login{
+    display:flex;
+    flex-direction:column;
+    width:40%
+  }
+  </style>
+</body>
+</html>
