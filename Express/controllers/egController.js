@@ -10,7 +10,7 @@ exports.getByIdRoute=async(req,res)=>{
     res.json(Task)
 }
 exports.postRoute =async(req,res)=>{
-    const {name,message}=req.body
+    const {task,completed}=req.body
     const exist =await Todo.findOne({task});
     if(exist) return res.status(404).json({
         message:"Task Already exist",
