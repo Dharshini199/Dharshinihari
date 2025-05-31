@@ -8,14 +8,13 @@
  
 
 
-
- 
  const app=express();
  const router = require('./routers/egRoutes')
 
  const PORT = process.env.PORT;
+  app.use(express.json())
  app.use(cors())
- app.use(express.json())
+
 app.use (router)
  app.listen(PORT,()=>{
     console.log(`Server running on http://localhost:${PORT}`);
